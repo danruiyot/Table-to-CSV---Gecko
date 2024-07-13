@@ -4,14 +4,14 @@
   "version": "1.0.0",
   "description": "Easily download HTML tables as CSV files with a single click. Perfect for data analysis and reporting.",
   "author": "Dan Kipruto",
-  "homepage_url": "https://your-website.com",
+  "homepage_url": "https://github.com/danruiyot/Table-to-CSV---Gecko.git",
   "permissions": [
     "activeTab",
     "storage"
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "table-to-csv@example.com"
+      "id": "https://github.com/danruiyot/Table-to-CSV---Gecko.git"
     }
   },
   "background": {
