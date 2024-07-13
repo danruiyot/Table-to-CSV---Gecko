@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table to CSV Downloader Options</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; }
+    label { display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h3>Options</h3>
+  <label>
+    <input type="checkbox" id="show-icon"> Show Download Icon
+  </label>
+  <script src="browser-polyfill.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      browser.storage.sync.get('showIcon').then(({ showIcon }) => {
+        document.getElementById('show-icon').checked = showIcon;
+      });
+      document.getElementById('show-icon').addEventListener('change', (event) => {
+        const showIcon = event.target.checked;
+        browser.storage.sync.set({ showIcon });
+      });
+    });
+  </script>
+</body>
+</html>
